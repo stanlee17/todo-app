@@ -14,6 +14,7 @@ const TodoInput = () => {
       type: 'ADD_TODO',
       payload: {
         label: newTodo,
+        isCompleted: false,
         id,
       },
     })

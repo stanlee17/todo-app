@@ -9,6 +9,21 @@ const todosReducer = (state = initialState, action) => {
         ...state,
         todos: [...state.todos, action.payload],
       }
+    case 'TOGGLE_TODO': {
+      const index = state.todos.findIndex(
+        (todo) => todo.id === action.payload.id,
+      )
+      const isCompleted = state.todos[index].isCompleted
+
+      Object.assign(state.todos[index], {
+        isCompleted: !isCompleted,
+      })
+
+      return {
+        ...state,
+        todos: [...state.todos],
+      }
+    }
     case 'DELETE_TODO':
       return {
         ...state,

@@ -107,4 +107,8 @@ p {
 .todos span {
   margin-left: 0.5rem;
 }
+
+.todo-completed {
+  text-decoration: line-through;
+}
 /*# sourceMappingURL=style.css.map */
