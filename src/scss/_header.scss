@@ -1,0 +1,23 @@
+.header {
+  &__info {
+    h3 {
+      margin-bottom: 3px;
+    }
+
+    p {
+      color: $cyan;
+      font-size: 12px;
+    }
+  }
+
+  &__filter {
+    p {
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    p:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+}

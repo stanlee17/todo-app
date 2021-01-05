@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #f9f9f9;
+  background-color: #7261bd;
+}
+
+.App {
+  max-width: 600px;
+  min-height: 500px;
+  margin: 7rem auto;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  background-color: #261e48;
+  -webkit-box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+p {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__info h3 {
+  margin-bottom: 3px;
+}
+
+.header__info p {
+  color: #19f0f0;
+  font-size: 12px;
+}
+
+.header__filter p {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.header__filter p:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.todo input[type='text'] {
+  margin: 1.5rem 0rem;
+  width: 83%;
+}
+
+.todo input[type='text'],
+.todo button {
+  padding: 8px 12px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}
+
+.todo button {
+  background-color: #523ea7;
+  color: #f9f9f9;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.todos__task:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.todos input[type='checkbox'] {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.todos span {
+  margin-left: 0.5rem;
+}
+/*# sourceMappingURL=style.css.map */
