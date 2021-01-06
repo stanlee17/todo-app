@@ -14,9 +14,11 @@ const todosReducer = (state = initialState, action) => {
         (todo) => todo.id === action.payload.id,
       )
       const isCompleted = state.todos[index].isCompleted
+      const isActive = state.todos[index].isActive
 
       Object.assign(state.todos[index], {
         isCompleted: !isCompleted,
+        isActive: !isActive,
       })
 
       return {

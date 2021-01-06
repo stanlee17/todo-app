@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   const todos = useSelector((state) => state.todos)
@@ -19,9 +20,15 @@ const Header = () => {
         <p>{todos.length ? todos.length : 'No'} active tasks</p>
       </div>
       <div className="header__filter">
-        <p>All</p>
-        <p>Active</p>
-        <p>Completed</p>
+        <Link to="/" className="header__filter-link">
+          All
+        </Link>
+        <Link to="/active" className="header__filter-link">
+          Active
+        </Link>
+        <Link to="/completed" className="header__filter-link">
+          Completed
+        </Link>
       </div>
     </div>
   )

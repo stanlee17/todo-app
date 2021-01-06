@@ -1,10 +1,9 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
-const Todos = () => {
+const Active = () => {
   const todos = useSelector((state) => state.todos)
   const dispatch = useDispatch()
-
   console.log(todos)
 
   const handleClick = (todo) => {
@@ -13,22 +12,19 @@ const Todos = () => {
       payload: todo,
     })
   }
-  return (
-    <div className="todos">
-      {todos.map((todo) => (
+  return todos.map(
+    (todo) =>
+      todo.isActive && (
         <div className="todos__task" key={todo.id}>
-          <input
-            type="checkbox"
-            checked={todos.isCompleted}
+          <span
+            className={todo.isCompleted ? 'todo-completed' : null}
             onClick={() => handleClick(todo)}
-          />
-          <span className={todo.isCompleted ? 'todo-completed' : null}>
+          >
             {todo.label}
           </span>
         </div>
-      ))}
-    </div>
+      ),
   )
 }
 
-export default Todos
+export default Active

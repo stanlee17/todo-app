@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Todos from './Todos'
 import { useDispatch } from 'react-redux'
 import { uuid } from 'uuidv4'
 
@@ -15,6 +14,7 @@ const TodoInput = () => {
       payload: {
         label: newTodo,
         isCompleted: false,
+        isActive: true,
         id,
       },
     })
@@ -32,7 +32,6 @@ const TodoInput = () => {
         />
         <button type="submit">Add todo</button>
       </form>
-      <Todos />
     </div>
   )
 }

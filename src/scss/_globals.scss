@@ -39,6 +39,10 @@ p {
   font-weight: 500;
 }
 
+.inactive {
+  color: $inactiveColor;
+}
+
 // Flexbox
 .flex {
   display: flex;

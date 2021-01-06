@@ -5,12 +5,15 @@ import reportWebVitals from './reportWebVitals'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import todosReducer from './reducers/todosReducer'
+import { BrowserRouter } from 'react-router-dom'
 
 const store = createStore(todosReducer)
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </Provider>,
   document.getElementById('root'),
 )
