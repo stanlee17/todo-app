@@ -7,7 +7,7 @@ const All = () => {
   const todos = useSelector((state) => state.todos)
   const dispatch = useDispatch()
 
-  const handleClick = (todo) => {
+  const handleToggleClick = (todo) => {
     dispatch({
       type: 'TOGGLE_TODO',
       payload: todo,
@@ -24,7 +24,7 @@ const All = () => {
             src={todo.isCompleted ? completed : inprogress}
             className="inprogress"
             alt="inprogress"
-            onClick={() => handleClick(todo)}
+            onClick={() => handleToggleClick(todo)}
           />
         </div>
       ))}

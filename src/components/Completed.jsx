@@ -9,30 +9,26 @@ const Completed = () => {
   const dispatch = useDispatch()
   console.log(todos)
 
-  const handleClick = (todo) => {
+  const handleRemoveClick = (todo) => {
     dispatch({
-      type: 'TOGGLE_TODO',
-      payload: todo,
+      type: 'DELETE_TODO',
+      payload: todo.id,
     })
   }
   return todos.map(
     (todo) =>
       todo.isCompleted && (
         <div className="todos__task flex flex-jc-sb" key={todo.id}>
-          <span
-            className={todo.isCompleted ? 'todo-completed' : null}
-            onClick={() => handleClick(todo)}
-          >
+          <span className={todo.isCompleted ? 'todo-completed' : null}>
             {todo.label}
           </span>
           <div>
             <img
-              src={todo.isCompleted ? completed : inprogress}
-              className="inprogress margin-right-sm"
-              alt="inprogress"
-              onClick={() => handleClick(todo)}
+              src={remove}
+              className="remove"
+              alt="remove"
+              onClick={() => handleRemoveClick(todo)}
             />
-            <img src={remove} className="remove" alt="remove" />
           </div>
         </div>
       ),

@@ -8,7 +8,7 @@ const Active = () => {
   const dispatch = useDispatch()
   console.log(todos)
 
-  const handleClick = (todo) => {
+  const handleToggleClick = (todo) => {
     dispatch({
       type: 'TOGGLE_TODO',
       payload: todo,
@@ -19,17 +19,14 @@ const Active = () => {
       todo.isActive && (
         <div className="todos">
           <div className="todos__task flex flex-jc-sb" key={todo.id}>
-            <span
-              className={todo.isCompleted ? 'todo-completed' : null}
-              onClick={() => handleClick(todo)}
-            >
+            <span className={todo.isCompleted ? 'todo-completed' : null}>
               {todo.label}
             </span>
             <img
               src={todo.isCompleted ? completed : inprogress}
               className="inprogress"
               alt="inprogress"
-              onClick={() => handleClick(todo)}
+              onClick={() => handleToggleClick(todo)}
             />
           </div>
         </div>
