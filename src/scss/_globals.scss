@@ -43,6 +43,12 @@ p {
   color: $inactiveColor;
 }
 
+.inprogress,
+.completed,
+.remove {
+  cursor: pointer;
+}
+
 // Flexbox
 .flex {
   display: flex;
@@ -58,4 +64,9 @@ p {
   &-ai-c {
     align-items: center;
   }
+}
+
+// Margin
+.margin-right-sm {
+  margin-right: 1rem;
 }

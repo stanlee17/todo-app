@@ -37,6 +37,12 @@ p {
   color: #8a8a8a;
 }
 
+.inprogress,
+.completed,
+.remove {
+  cursor: pointer;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,6 +65,10 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.margin-right-sm {
+  margin-right: 1rem;
 }
 
 .header__info h3 {
@@ -103,11 +113,6 @@ p {
 
 .todos__task:not(:last-child) {
   margin-bottom: 1rem;
-}
-
-.todos input[type='checkbox'] {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
 }
 
 .todo-completed {
