@@ -1,13 +1,10 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import inprogress from '../images/inprogress.svg'
-import completed from '../images/completed.svg'
 import remove from '../images/remove.svg'
 
 const Completed = () => {
   const todos = useSelector((state) => state.todos)
   const dispatch = useDispatch()
-  console.log(todos)
 
   const handleRemoveClick = (todo) => {
     dispatch({
@@ -15,7 +12,8 @@ const Completed = () => {
       payload: todo.id,
     })
   }
-  return todos.map(
+
+  const isCompleted = todos.map(
     (todo) =>
       todo.isCompleted && (
         <div className="todos__task flex flex-jc-sb" key={todo.id}>
@@ -33,6 +31,8 @@ const Completed = () => {
         </div>
       ),
   )
+
+  return <div className="todos">{isCompleted}</div>
 }
 
 export default Completed
